@@ -1,0 +1,156 @@
+.caption
+  display: flex
+  flex-direction: column
+  align-items: center
+.choose-tour__container
+  display: flex
+  flex-direction: column
+  margin: 136px 0 
+  
+.choose-tour__container-topside
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.section-title, .section-title__choose
+  text-align: center
+  color: $black
+  margin-bottom: 30px 
+.section-title__choose
+  margin-bottom: 35px 
+
+.choose-tour__menu
+  max-width: 700px
+  width: 100%
+  margin-bottom: 105px
+  ul
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.choose-tour__menu-item
+  text-decoration: none
+  color: $black
+  transition: 0.25s
+  padding-bottom: 6px
+
+.choose-tour__menu-item:hover
+  transition: 0.25s
+  color: $black
+  border-bottom: 2px solid $black
+
+.choose-tour__menu-item_active
+  color: $orange-200
+  border-bottom: 2px solid $orange-200
+
+.choose-tour__cards
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+
+.choose-tour__card
+  max-width: 370px
+  position: relative
+  overflow: hidden
+  width: 100%
+  height: 531px
+  border-radius: 50px
+  background-size: 100%
+  background-repeat: no-repeat
+  background-position: center
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  transition: 300ms ease
+.choose-tour__card:hover, .stories-card:hover
+  background-size: 120%
+  background-position: center
+  overflow: hidden
+  transition: 300ms ease
+
+.choose-tour__card:nth-of-type(1), .choose-tour__card:nth-of-type(2), .choose-tour__card:nth-of-type(3)
+  margin-bottom: 30px
+
+.choose-tour__card-topside
+  padding: 50px 50px 0px 
+  display: flex
+  flex-direction: column
+
+.card-title
+  padding-bottom: 16px
+
+.choose-tour__button
+  margin: 0 auto 43px 30px
+.choose-tour__button, .stories-card__button
+  button
+    display: flex
+    align-items: center
+    font-size: 23px
+    max-width: 199px
+    line-height: 28px
+    font-weight: bold
+    color: $white
+    border: none
+    padding: 7px 20px
+    background-color: transparent
+    transition: 0.5s
+    cursor: pointer
+    border-radius: 50px
+    img
+      padding-left: 15px
+
+.choose-tour__card:hover, .stories-card:hover
+  cursor: pointer
+  button
+    background-color: $green-400
+    border-radius: 50px
+    transition: 0.5s
+
+.choose-tour__card:active, .stories-card:active
+  button
+    background-color: $orange-200
+    transition: 0.25s
+
+//media
+
+@media (max-width: $layout-breakpoint-md)
+  .choose-tour__card
+    max-width: 450px
+  .choose-tour__card:nth-of-type(1), .choose-tour__card:nth-of-type(2), .choose-tour__card:nth-of-type(3), .choose-tour__card:nth-of-type(4)
+    margin-bottom: 18px
+
+@media (max-width: $layout-breakpoint-small)
+  .choose-tour__container
+    margin: 75px 0 57px
+  .choose-tour__menu-items
+    li
+      padding: 5px
+  .choose-tour__menu
+    margin-bottom: 45px
+    ul
+      justify-content: center
+  .choose-tour__menu-item
+    padding-bottom: 2px
+  .section-title__choose
+    margin-bottom: 25px
+  .choose-tour__card
+    max-width: 318px
+    height: 318px
+    border-radius: 20px
+    margin-bottom: 18px
+  .choose-tour__card-topside
+    padding: 25px 25px 0px
+  .choose-tour__button
+    margin: 0 auto 26.5px 25px
+  .choose-tour__button, .stories-card__button
+    button
+      font-size: 16px
+      max-width: 123px
+      line-height: 142%
+      padding: 0 15px 0 0
+  .section-title
+    margin-bottom: 20px
+
+
+

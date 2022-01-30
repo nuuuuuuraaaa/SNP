@@ -1,0 +1,60 @@
+<section class="build-tour">
+    <div class="build-tour__container container">
+      <div class="caption">
+        <div class="section-title h2">
+          <h2>Собери свой тур</h2>
+        </div>
+        <div class="section-subtitle section-subtitle__small p-normal">
+          <p>Идейные соображения высшего порядка,<br> а также рамки и место обучения кадров</p>
+        </div>
+      </div>
+      <form action="" class="build-tour__form p-normal" method="post">
+        <div class="form-group__input">
+          <div class="form-group">
+            <label for="fullname-field">Имя</label>
+            <input placeholder="Введите Ваше имя" type="text" name="fullname" id="fullname-field">
+          </div>
+          <div class="form-group">
+            <label for="direction-field">Направление</label>
+            <select  name="direction" id="direction-field"> 
+              <option disabled value="">Куда хотите ехать</option>
+              <option value="1">Куда хотите ехать</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="email-field">Email</label>
+            <input placeholder="example@mail.com" type="email" name="email" id="email-field">
+          </div>
+          <div class="form-group">
+            <label for="phone-field">Телефон</label>
+            <input placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" type="tel" name="phone" id="phone-field">
+          </div>
+          <div class="form-group">
+            <label for="dateOf-field">Дата от</label>
+            <input type="date" name="date" id="dateOf-field">
+          </div>
+          <div class="form-group">
+            <label for="dateTo-field">Дата до</label>
+            <input type="date" name="date" id="dateTo-field">
+          </div>
+        </div>
+        <div class="form-group__textarea">
+          <label for="comment-field">Комментарий</label>
+          <textarea type="text" name="comment" id="comment-field" cols="110"></textarea>
+        </div>
+        <div class="form-group__radio" > 
+          <p class="p-normal">Вам есть 18 лет?</p>
+          <label class="p-normal" for="ageYes"><input type="radio" name="age" id="ageYes" value="yes"> Да</label>
+          <label class="p-normal" for="ageNo"><input type="radio" name="age" id="ageNo" value="no"> Нет</label>
+        </div>
+        <div class="form-group__checkbox">
+          <input type="checkbox" name="agreement" id="agreement">
+          <label for="agreement" class="label-checkbox p-small"> Нажимая кнопку, я принимаю условия <a href="#non">Лицензионного договора</a></label>
+        </div>
+        <div class="form-group__button">
+          <button class="btn-submit p-normal" type="submit" onclick="alert('click');return false">Найти тур</button>
+          <button class="btn-reset p-normal" type="reset" >Сбросить</button>
+        </div>
+      </form>
+    </div>
+  </section>

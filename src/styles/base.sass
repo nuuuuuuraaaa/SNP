@@ -1,0 +1,22 @@
+*, body
+  box-sizing: border-box
+  font-family: 'Roboto', sans-serif
+
+.container
+  max-width: 1170px
+  width: 100%
+
+.choose-tour, .build-tour, .reviews, .photo-tour, .stories, .cta
+  background-color: $beige-200
+  justify-content: center
+  display: flex
+
+@media (max-width: $layout-breakpoint-md)
+  .build-tour, .reviews, .choose-tour, .stories, .footer-container
+    padding: 0 53px
+
+@media (max-width: $layout-breakpoint-small)
+  .build-tour, .reviews, .choose-tour, .stories, .footer-container, .photo-tour
+    padding: 0 21px
+  .section-subtitle__small
+    margin-bottom: 40px

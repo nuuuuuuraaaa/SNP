@@ -1,0 +1,176 @@
+.section-subtitle
+  max-width: 418px
+  text-align: center
+  color: $gray-300
+  margin-bottom: 100px
+
+.build-tour__form
+  background-color: $white
+  max-width: 1170px
+  border-radius: 50px
+  padding: 55px 70px 70px
+  margin-bottom: 135px
+  display: flex
+  flex-direction: column
+  input, textarea, select
+    outline: none
+    background-color: $beige-200
+    color: $gray-300
+    border: 1px solid $beige-100
+    font-size: 20px
+    border-radius: 10px
+
+.form-group__input
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  padding-bottom: 18px
+
+.form-group
+  padding: 17px 0
+  display: flex
+  flex-direction: column
+  input, select
+    width: 500px
+    padding: 20px
+
+.form-group, .form-group__textarea
+  label
+    color: $black
+    font-size: 20px
+    line-height: 28px
+    margin-bottom: 6px
+
+.form-group__textarea
+  textarea
+    width: 100%
+    height: 152px
+    resize: none
+    margin-bottom: 25px
+    margin-top: 8px
+
+.form-group__radio
+  margin-bottom: 32px
+  p
+    padding-bottom: 7px
+  label
+    padding-right: 31px
+
+.label-checkbox
+  padding-left: 17px
+  color: $gray-300
+  a
+    color: $black
+    text-decoration: none
+input[type=checkbox]
+  transform: scale(2)
+  margin-bottom: 33px
+  margin-left: 6px
+
+input[type=radio]
+  transform: scale(2)
+  margin-right: 12px
+
+.form-group__checkbox
+  padding-bottom: 7px
+  a:hover 
+    text-decoration: underline
+  a:active 
+    color: $green-400
+
+.form-group__button
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+.btn-submit, .btn-reset
+  cursor: pointer
+  transition: 0.25s
+  border-radius: 10px
+  padding: 15px 70.5px
+  border: none
+
+.btn-submit
+  background-color: $green-400
+  color: $white
+  margin-right: 32px
+
+.btn-submit:hover, .btn-submit:active, .btn-reset:hover, .btn-reset:active 
+  transition: 0.25s
+
+.btn-submit:hover
+  background-color: $green-300
+
+.btn-submit:active
+  background-color: $green-200
+
+.btn-reset
+  background-color: $green-100
+  color: $green-400
+
+.btn-reset:hover
+  background-color: $gray-100
+
+.btn-reset:active 
+  background-color: $gray-200
+
+//media
+
+@media (max-width: $layout-breakpoint-md)
+  .form-group
+    input, select
+      width: 389px
+  .build-tour__form
+    padding: 44px 60px 60px
+
+@media (max-width: $layout-breakpoint-small)
+  .form-group
+    padding: 30px 0 0
+    input, select
+      width: 278px
+      padding: 10px
+      font-size: 16px
+      line-height: 142%
+  .form-group__input
+    padding-bottom: 24px
+  .form-group:nth-of-type(1)
+    padding: 0
+  .form-group__textarea
+    textarea
+      height: 132px
+      font-size: 16px
+      padding: 10px
+  .build-tour__form
+    padding: 20px 20px 40px
+    border-radius: 30px
+    margin-bottom: 75px
+  .btn-submit
+    margin-right: 10px
+  .btn-submit, .btn-reset
+    padding: 12px 29.5px
+  .form-group__checkbox
+    padding-bottom: 54px
+  .section-subtitle
+    margin-bottom: 50px 
+  .form-group, .form-group__textarea
+    label
+      color: $black
+      font-size: 16px
+      line-height: 142%
+      margin-bottom: 8px
+  .form-group__radio
+    margin-bottom: 30px
+    label
+      padding-right: 20px
+  input[type=radio]
+    transform: scale(1.5)
+    margin-right: 10px
+  input[type=checkbox]
+    margin-bottom: 0
+    margin-left: 3px
+    transform: scale(1.5)
+  .label-checkbox
+    padding-left: 8px
+  .section-subtitle__small
+    margin-bottom: 40px

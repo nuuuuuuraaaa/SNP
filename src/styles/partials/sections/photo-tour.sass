@@ -1,0 +1,71 @@
+.photo-tour
+  display: flex
+  flex-direction: column
+  padding-bottom: 135px
+ 
+.photo-tour__img
+  display: flex
+  flex-direction: column
+  width: 100%
+  img
+    border-radius: 50px
+    height: 301px
+.photo-tour__img-big, .photo-tour__img-small
+  display: flex
+  padding-bottom: 30px
+  flex-direction: row
+  justify-content: space-around
+  flex-wrap: wrap
+  img
+    max-width: 442.5px
+.photo-tour__img-small
+  img
+    max-width: 347.32px
+.photo-tour__img-big:last-of-type
+  padding-bottom: 0
+
+//media
+@media (max-width: $layout-breakpoint-md)
+  .photo-tour__img-big
+    img
+      max-width: 314.67px
+      height: 300px
+  .photo-tour__img-small
+    img
+      max-width: 231px
+      height: 301px
+    img:nth-of-type(3)
+      display: none
+  .photo-tour__img-big:nth-of-type(1)
+    img:nth-of-type(2)
+      display: none
+  .photo-tour__img-big:last-of-type
+    img:nth-of-type(4)
+      display: none
+
+@media (max-width: $layout-breakpoint-small)
+  .photo-tour
+    padding-bottom: 75px
+  .photo-tour__img-big
+    img
+      max-width: 150px
+      height: 110px
+  .photo-tour__img-small, .photo-tour__img-big
+    padding-bottom: 18px
+    justify-content: space-between
+    img
+      border-radius: 20px
+  .photo-tour__img-small
+    img
+      max-width: 99.3px
+      height: 110px
+    img:nth-of-type(2), img:nth-of-type(3)
+      display: none
+  .photo-tour__img-big:nth-of-type(1)
+    img:nth-of-type(2), img:nth-of-type(3)
+      display: none
+  .photo-tour__img-big:last-of-type
+    img:nth-of-type(4), img:nth-of-type(3)
+      display: none
+    img
+      max-width: 154px

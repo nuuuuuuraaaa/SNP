@@ -1,0 +1,62 @@
+.reviews__container
+  display: flex
+  flex-direction: column
+  margin-bottom: 135px
+.reviews-cards
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+.reviews-card
+  max-width: 570px
+  width: 100%
+  height: 673px
+  display: flex
+  color: $black
+  flex-direction: column
+  justify-content: space-between
+  padding: 40px
+  background-color: $beige-100
+  border-radius: 50px
+.reviews-card__author
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+.reviews-card__author-photo
+  img
+    max-width: 75px
+    border-radius: 50%
+.reviews-card__author-name
+  h3
+    margin-bottom: 8px
+  span
+    color: $gray-300
+    font-size: 17px
+    letter-spacing: -0.01em
+    line-height: 24px
+
+//media
+
+@media (max-width: $layout-breakpoint-md)
+  .reviews-card
+    max-width: 450px
+    height: 841px
+
+@media (max-width: $layout-breakpoint-small)
+  .reviews-card
+    max-width: 318px
+    padding: 20px
+    border-radius: 20px
+  .reviews-card:nth-of-type(1)
+    height: 408px
+    margin-bottom: 18px
+  .reviews-card:nth-of-type(2)
+    height: 592px
+  .reviews-card__author
+    align-items: flex-end
+  .reviews-card__author-name 
+    span
+      font-size: 16px
+  .reviews__container
+    margin-bottom: 75px
