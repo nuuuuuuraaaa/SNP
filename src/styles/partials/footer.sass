@@ -1,0 +1,74 @@
+.footer
+  background-color: $beige-100
+  padding: 30px 0
+  display: flex
+  justify-content: center
+.footer-container
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  p
+    color: $gray-300
+  ul
+    display: flex
+  a
+    text-decoration: none
+    color: $black
+    position: relative
+  li:not(:last-of-type)
+    padding-right: 63px
+  a:before
+    content: ""
+    background-repeat: no-repeat
+    position: absolute
+  a:hover 
+    text-decoration: underline
+.footer_instagram:before
+  background-image: url("/assets/images/inst-logo.svg")
+  background-size: 16px
+  left: -30%
+  right: 0
+  top: 17%
+  bottom: 0
+.footer_facebook:before
+  background-image: url("/assets/images/fb-logo.svg")
+  background-size: 25px
+  left: -42%
+  right: 0
+  top: -10%
+  bottom: 0
+.footer_vkontakte:before
+  background-image: url("/assets/images/vk-logo.svg")
+  background-size: 20px
+  left: -35%
+  right: 0%
+  top: 30%
+  bottom: 0%
+
+//media
+@media (max-width: $layout-breakpoint-small)
+  .footer-container
+    justify-content: center
+    p
+      padding-bottom: 7px
+  .footer
+    padding: 23px 0
+  .footer-container 
+    li:nth-of-type(1) 
+      padding-right: 40px
+      padding-left: 22px
+    li:nth-of-type(2) 
+      padding-right: 40px
+  .footer_instagram:before
+    background-size: 12px
+    left: -26%
+    top: 18%
+  .footer_vkontakte:before
+    background-size: 17px
+    left: -32%
+    top: 30%
+  .footer_facebook:before
+    background-size: 21px
+    left: -38%
+    top: -4%

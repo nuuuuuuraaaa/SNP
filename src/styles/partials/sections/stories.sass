@@ -1,0 +1,97 @@
+//stories
+.stories-card
+  width: 100%
+  height: 567px
+  border-radius: 50px
+  padding-bottom: 50px
+.stories-card:nth-of-type(1)
+  background-image: url("/assets/images/story-photo-1.jpg")
+.stories-card
+  background-size: 100%
+  margin-bottom: 50px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 60px
+  transition: 300ms ease
+  background-position: center
+  background-repeat: no-repeat
+  background-repeat: no-repeat
+  position: relative
+  overflow: hidden
+.stories-card:nth-of-type(2)
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("/assets/images/story-photo-1.jpg")
+.stories-card:nth-of-type(3)
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("/assets/images/story-photo-2.jpg")
+.stories-card:nth-of-type(4)
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("/assets/images/story-photo-3.jpg")
+.stories-card__text-bottom
+  display: flex
+  justify-content: space-between
+  align-items: center
+.stories-card__text-top
+  h3
+    color: $white
+    padding-bottom: 37px
+  p
+    max-width: 554px
+    color: $white
+  ul
+    padding-top: 30px
+    color: $white
+    padding-left: 10px
+    li
+      list-style-type: disc
+      list-style-position: inside
+      font-size: 20px
+      line-height: 142%
+.stories-card__social
+  a
+    text-decoration: none
+    color: $white
+    font-size: 20px
+    line-height: 28px
+  a:not(:last-of-type)
+    padding-right: 33px
+  a:hover
+    text-decoration: underline
+  a:active 
+    color: $orange-200
+
+//media
+
+@media (max-width: $layout-breakpoint-md)
+  .stories-card:nth-of-type(2)
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("/assets/images/story-photo-1-md.jpg")
+  .stories-card:nth-of-type(3)
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("/assets/images/story-photo-2-md.jpg")
+  .stories-card:nth-of-type(4)
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("/assets/images/story-photo-3-md.jpg")
+
+@media (max-width: $layout-breakpoint-small)
+  .stories-card
+    height: 455px
+    padding: 30px 25px 30px 30px
+    border-radius: 20px
+    margin-bottom: 20px
+  .stories-card:nth-of-type(2)
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("/assets/images/story-photo-1-small.jpg")
+  .stories-card:nth-of-type(3)
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("/assets/images/story-photo-2-small.jpg")
+  .stories-card:nth-of-type(4)
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("/assets/images/story-photo-3-small.jpg")
+  .stories-card__text-top
+    h3
+      max-width: 150px
+      padding-bottom: 20px
+  .stories-card__text-top 
+    ul
+      padding-top: 26px
+      li
+        font-size: 16px
+        line-height: 142%
+  .stories-card__social
+    display: none
+  .stories-card__button
+    button
+      align-items: flex-start
