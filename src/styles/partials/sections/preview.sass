@@ -1,0 +1,64 @@
+.preview
+  width: 100%
+  background-color: $beige-200
+  display: flex
+  flex-direction: column
+  background-image: url("/assets/images/preview-img.jpg")
+  background-repeat: no-repeat
+  background-size: auto
+  background-position: center
+  justify-content: center
+  align-items: center
+.preview-main 
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.preview-main__title
+  text-align: center
+  padding: 207px 0 50px 0
+  max-width: 768px
+  font-weight: bold
+
+.preview-main__subtitle
+  text-align: center
+  max-width: 562px
+  padding-bottom: 50px
+
+.preview-main__button
+  background-color: $white
+  border: none
+  padding: 5px 20px
+  border-radius: 10px
+  margin-bottom: 124px 
+  transition: 0.25s
+
+.preview-main__button:hover
+  transition: 0.25s
+  background-color: $orange-200
+  cursor: pointer
+
+.preview-main__button:active
+  background-color: $orange-100
+
+//media
+@media (max-width: $layout-breakpoint-md)
+  .preview-main__subtitle
+    max-width: 442px
+  .preview-main
+    background-image: url("/assets/images/preview-md.jpg")
+  .preview-main__button
+    margin-bottom: 119px
+
+@media (max-width: $layout-breakpoint-small)
+  .preview-main
+    background-size: cover
+    background-image: url("/assets/images/preview-small.jpg")
+  .preview-main__title
+    padding: 140px 0 40px 0
+  .preview-main__button
+    margin-bottom: 52px
+  .preview-main__subtitle
+    padding-bottom: 40px
+    margin: 0 25px
