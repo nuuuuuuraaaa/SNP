@@ -37,7 +37,10 @@ module.exports = {
   resolve: { alias: { handlebars: 'handlebars/dist/handlebars.min.js' } },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({ template: './index.html' }),
+    new HtmlWebpackPlugin({
+      output: 'index.html',
+      template: './pages/index.hbs'
+    }),
     new CopyWebpackPlugin({
       patterns: [
         {

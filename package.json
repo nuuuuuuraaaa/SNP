@@ -1,10 +1,12 @@
 {
   "name": "baboshina",
+  "homepage": "https://nuuuuuuraaaa.github.io/SNP",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
     "build": "webpack --mode production",
+    "deploy": "build && node ./deployment/gh-pages.js",
     "dev": "webpack --mode development",
     "watch": "dev --watch",
     "start": "webpack-dev-server --progress"
