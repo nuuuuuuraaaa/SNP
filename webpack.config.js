@@ -3,6 +3,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   target: 'web',
@@ -22,7 +23,8 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        sideEffects: true
       },
       // {
       //   test: /\.(png|jpg|gif|svg|eot|ttf|woff)$/,
@@ -37,19 +39,13 @@ module.exports = {
   resolve: { alias: { handlebars: 'handlebars/dist/handlebars.min.js' } },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      output: 'index.html',
-      template: './pages/index.hbs'
-    }),
+    new MiniCssExtractPlugin({ filename: '[contenthash].css' }),
+    new HtmlWebpackPlugin({ output: 'index.html', template: './pages/index.hbs' }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/assets/images'),
-          to: path.resolve(__dirname, 'dist/assets/images')
-        },
-        {
-          from: path.resolve(__dirname, 'src/favicon'),
-          to: path.resolve(__dirname, 'dist/assets/favicon')
+          from: path.resolve(__dirname, 'src/assets'),
+          to: path.resolve(__dirname, 'dist/assets')
         }
       ]
     })
